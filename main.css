@@ -1,0 +1,105 @@
+:root{
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #885CF6;
+    --grey: #6B7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--dark);
+    color: white;
+}
+
+header{
+    padding: 30px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: var(--grey);
+    font-weight: 300;
+}
+
+#new-task-form{
+    display: flex;
+}
+
+input , button{
+    appearance: none;
+    border: none;
+    order: none;
+    background: none;
+}
+
+#new-task-input{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 15px ;
+    color: var(--light);
+    font-size: 20px;
+}
+
+#new-task-input::placeholder{
+    color: var(--grey);
+}
+
+#new-task-submit {
+    color: var(--pink);
+    font-size: 15px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover{
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 30px 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 15px;
+}
+
+.task-list h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--grey);
+    font-weight: 300;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+}
